@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   resources :adults
   resources :kids
   resources :news
-  get 'pages/home'
+  
+  root to: 'pages#home'
 
-  get 'pages/courses'
+  get 'courses', to: 'pages#courses'
 
-  get 'pages/contact'
+  get 'contact', to: 'pages#contact'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
