@@ -1,5 +1,5 @@
 class NewsController < ApplicationController
-  before_action :set_news, only: [:show, :edit, :update, :destroy]
+  before_action :set_news, only: [:show, :edit, :update, :destroy, :toggle_status]
 
   # GET /news
   # GET /news.json
@@ -59,6 +59,15 @@ class NewsController < ApplicationController
       format.html { redirect_to news_index_url, notice: 'News was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def toggle_status
+    if @news.draft?
+      @news.published!
+    else @news.published?
+      @news.draft!
+    end
+    redirect_to news_url, notice: 'Post status has been updated.'
   end
 
   private
