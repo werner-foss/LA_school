@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @adult.title %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @adult.subtitle %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @adult.body %>
+</p>
+
+<p>
+  <%= image_tag @adult.main_image %>
+</p>
+
+<%= link_to 'Edit', edit_adult_path(@adult) %> |
+<%= link_to 'Back', adults_path %>

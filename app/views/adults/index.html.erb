@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Adults</h1>
+
+<h1>Courses for Adults</h1>
+<%= link_to 'New Course', new_adult_path %>
+
+<div>
+  <% @adults.each do |adult| %>
+    <p> Title <%= link_to adult.title, adult_path(adult) %></p>
+    <p> Level <%= adult.subtitle %></p>
+    <p><%= image_tag adult.thumb_image %></p>
+    <p><%= link_to 'Edit', edit_adult_path(adult) %> |
+       <%= link_to 'Destroy', adult, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+  <% end %>
+</div>
+

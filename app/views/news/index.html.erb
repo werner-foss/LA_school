@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<h1>News</h1>
+
+<%= link_to 'New News', new_news_path %>
+
+<div>
+  <% @news.each do |news| %>
+    <p> Title: <%= link_to news.title, news_path(news) %></p>
+    <p> Subtitle: <%= news.subtitle %></p>
+    <p> Body: <%= news.body %></p>
+    <p><%= link_to 'Edit', edit_news_path(news) %> |
+       <%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+    <hr>
+  <% end %>
+</div>

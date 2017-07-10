@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @kid.title %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @kid.subtitle %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @kid.body %>
+</p>
+
+<p>
+  <%= image_tag @kid.main_image %>
+</p>
+
+
+<%= link_to 'Edit', edit_kid_path(@kid) %> |
+<%= link_to 'Back', kids_path %>
