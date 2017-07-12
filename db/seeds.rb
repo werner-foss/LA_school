@@ -38,6 +38,7 @@ puts "6 courses for kids were created"
   News.create!(
     title: "Some awsome news #{news}",
     subtitle: "A little description of it",
+    small_image: "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
     body: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis 
            praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias 
            excepturi sint occaecati cupiditate non provident, similique sunt in culpa 

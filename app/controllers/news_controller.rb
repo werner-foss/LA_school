@@ -1,5 +1,5 @@
 class NewsController < ApplicationController
-  before_action :set_news, only: [:show, :edit, :update, :destroy]
+  before_action :set_news, only: [:show, :edit, :update, :destroy, :toggle_status]
 
   # GET /news
   # GET /news.json
@@ -60,6 +60,15 @@ class NewsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def toggle_status
+    if @news.draft?
+      @news.published!
+    else @news.published?
+      @news.draft!
+    end
+    redirect_to news_url, notice: 'Post status has been updated.'
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -69,6 +78,6 @@ class NewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def news_params
-      params.require(:news).permit(:title, :subtitle, :body)
+      params.require(:news).permit(:title, :subtitle, :body, :small_image)
     end
 end

@@ -10,6 +10,8 @@
   <%= @news.subtitle %>
 </p>
 
+<p><%= image_tag @news.small_image unless @news.small_image.nil? %></p>
+
 <p>
   <strong>Body:</strong>
   <%= @news.body %>
