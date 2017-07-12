@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   get 'courses', to: 'pages#courses'
 
   get 'contact', to: 'pages#contact'
+  
+  get 'about', to: 'pages#about'
 
 end
