@@ -47,10 +47,18 @@ puts "6 courses for kids were created"
   end
 puts "5 news were created"
 
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+    )
+  end
+puts "3 topics were created"
+
 5.times do |question|
   Question.create!(
     title: "FAQ #{question}",
     body: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium",
+    topic_id: Topic.last.id
     )
   end
 puts "5 questions were created"
