@@ -1,4 +1,5 @@
 class News < ApplicationRecord
+  include Placeholder
   enum status: { draft: 0, published: 1 }
   extend FriendlyId
   friendly_id :title, use: :slugged
@@ -7,6 +8,6 @@ class News < ApplicationRecord
   after_initialize :set_defaults
   
   def set_defaults
-    self.small_image ||= "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150"
+    self.small_image ||= Placeholder.image_generator(height:'350', width:'150')
   end
 end
