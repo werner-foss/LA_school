@@ -19,5 +19,12 @@
   <%= image_tag @adult.main_image %>
 </p>
 
+<div>
+  <p> <strong> Type of the course  </strong></p>
+  <% @adult.courses.each do |t| %>
+   <p><%= t.name %> </p>
+  <% end %>
+</div>
+
 <%= link_to 'Edit', edit_adult_path(@adult) %> |
 <%= link_to 'Back', adults_path %>

@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   resources :questions
+  
   resources :adults
+  
+  get 'business-course', to: 'adults#business'
+  
+  get 'general-course', to: 'adults#general'
+  
+  get 'specialized-course', to: 'adults#specialized'
+  
   resources :kids
   
   resources :news do
@@ -14,5 +22,9 @@ Rails.application.routes.draw do
   get 'courses', to: 'pages#courses'
 
   get 'contact', to: 'pages#contact'
+  
+  get 'about', to: 'pages#about'
+  
+
 
 end

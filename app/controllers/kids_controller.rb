@@ -28,7 +28,7 @@ class KidsController < ApplicationController
 
     respond_to do |format|
       if @kid.save
-        format.html { redirect_to @kid, notice: 'Kid was successfully created.' }
+        format.html { redirect_to @kid, notice: 'The course was successfully created.' }
         format.json { render :show, status: :created, location: @kid }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class KidsController < ApplicationController
   def update
     respond_to do |format|
       if @kid.update(kid_params)
-        format.html { redirect_to @kid, notice: 'Kid was successfully updated.' }
+        format.html { redirect_to @kid, notice: 'The course was successfully updated.' }
         format.json { render :show, status: :ok, location: @kid }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class KidsController < ApplicationController
   def destroy
     @kid.destroy
     respond_to do |format|
-      format.html { redirect_to kids_url, notice: 'Kid was successfully destroyed.' }
+      format.html { redirect_to kids_url, notice: 'The course was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
