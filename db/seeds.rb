@@ -86,3 +86,11 @@ puts "3 topics were created"
     )
   end
 puts "5 questions were created"
+
+3.times do |course|
+  Course.create!(
+    name: "Course #{course}",
+    adult_id: Adult.last.id
+    )
+  end
+puts "3 courses were created"

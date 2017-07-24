@@ -1,4 +1,5 @@
 class Adult < ApplicationRecord
+  has_many :courses, dependent: :destroy
   include Placeholder
   extend FriendlyId
   friendly_id :title, use: :slugged
