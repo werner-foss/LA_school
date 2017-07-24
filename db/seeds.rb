@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-3.times do |adult|
+9.times do |adult|
   Adult.create!(
     title: "Course #{adult}",
     subtitle: "General Course",
@@ -14,31 +14,8 @@
            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     main_image: "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
-    thumb_image: "https://placeholdit.imgix.net/~text?txtsize=6&txt=50%C3%9750&w=50&h=50"
-    )
-  end
-  
-3.times do |adult|
-  Adult.create!(
-    title: "Course #{adult}",
-    subtitle: "Business Course",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    main_image: "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
-    thumb_image: "https://placeholdit.imgix.net/~text?txtsize=6&txt=50%C3%9750&w=50&h=50"
-    )
-  end
-
-3.times do |adult|
-  Adult.create!(
-    title: "Course #{adult}",
-    subtitle: "Specialized Course",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    main_image: "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
-    thumb_image: "https://placeholdit.imgix.net/~text?txtsize=6&txt=50%C3%9750&w=50&h=50"
+    thumb_image: "https://placeholdit.imgix.net/~text?txtsize=6&txt=50%C3%9750&w=50&h=50",
+    courses_attributes: [{name: "Business"}, {name: "General"}]
     )
   end
   
@@ -86,11 +63,3 @@ puts "3 topics were created"
     )
   end
 puts "5 questions were created"
-
-3.times do |course|
-  Course.create!(
-    name: "Course #{course}",
-    adult_id: Adult.last.id
-    )
-  end
-puts "3 courses were created"

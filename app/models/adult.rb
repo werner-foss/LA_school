@@ -1,5 +1,6 @@
 class Adult < ApplicationRecord
   has_many :courses, dependent: :destroy
+  accepts_nested_attributes_for :courses, allow_destroy: true, reject_if: lambda {|attrs| attrs['name'].blank?}
   include Placeholder
   extend FriendlyId
   friendly_id :title, use: :slugged
