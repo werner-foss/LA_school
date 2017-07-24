@@ -15,6 +15,8 @@ class AdultsController < ApplicationController
   # GET /adults/new
   def new
     @adult = Adult.new
+    
+    3.times {@adult.courses.build}
   end
 
   # GET /adults/1/edit
@@ -81,6 +83,6 @@ class AdultsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def adult_params
-      params.require(:adult).permit(:title, :subtitle, :body, :main_image, :thumb_image)
+      params.require(:adult).permit(:title, :subtitle, :body, :main_image, :thumb_image, courses_attributes: [:name])
     end
 end
