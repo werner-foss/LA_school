@@ -55,4 +55,5 @@ Rails.application.configure do
    config.web_console.whitelisted_ips = '10.240.1.4'
    config.web_console.whitelisted_ips = '10.240.0.0/16'
    config.action_mailer.default_url_options = {:host => 'werner-workspace-wernerfoss.c9users.io'}
+   # Rails.application.routes.default_url_options[:host] = 'werner-workspace-wernerfoss.c9users.io'
 end
