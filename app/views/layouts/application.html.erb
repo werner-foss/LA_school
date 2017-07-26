@@ -14,7 +14,7 @@
     <%= yield %>
     
     <% if session[:source] %>
-     <p>Thanks for visiting our website from <%= session[:source] %></p>
+     <p> Thanks for visiting our website from <strong><%= session[:source] %></strong></p>
     <% end %>
   </body>
 </html>
