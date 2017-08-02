@@ -1,5 +1,6 @@
 class AdultsController < ApplicationController
   before_action :set_adult, only: [:show, :edit, :update, :destroy]
+  layout "adult"
 
   # GET /adults
   # GET /adults.json
