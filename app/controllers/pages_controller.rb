@@ -9,5 +9,6 @@ class PagesController < ApplicationController
   end
   
   def about
+    @page_title = "About LAschool"
   end
 end

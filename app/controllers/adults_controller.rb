@@ -5,11 +5,13 @@ class AdultsController < ApplicationController
   # GET /adults.json
   def index
     @adults = Adult.all
+    @page_title = "Courses for adult learners"
   end
 
   # GET /adults/1
   # GET /adults/1.json
   def show
+     @page_title = @adult.title
   end
 
   # GET /adults/new
