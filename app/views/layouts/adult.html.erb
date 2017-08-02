@@ -12,14 +12,12 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     
-    <%= render "partials/nav" %>
+    <%= render "partials/nav", location: 'navigation' %>
     
-    <%= render "partials/devise" %>
+    <%= login_helper %>
     
     <%= yield %>
     
-    <% if session[:source] %>
-     <p> Thanks for visiting our website from <strong><%= session[:source] %></strong></p>
-    <% end %>
+    <%= source_helper("adults") %>
   </body>
 </html>
