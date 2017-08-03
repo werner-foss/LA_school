@@ -65,19 +65,7 @@ class AdultsController < ApplicationController
       format.json { head :no_content }
     end
   end
-# Custom scope actions
-  def general
-    @general = Adult.general_course
-  end
-  
-  def business
-    @business = Adult.business_course
-  end
-  
-  def specialized
-    @specialized = Adult.specialized_course
-  end
-  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_adult

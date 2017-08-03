@@ -5,12 +5,6 @@ Rails.application.routes.draw do
   
   resources :adults
   
-  get 'business-course', to: 'adults#business'
-  
-  get 'general-course', to: 'adults#general'
-  
-  get 'specialized-course', to: 'adults#specialized'
-  
   resources :kids
   
   resources :news do
