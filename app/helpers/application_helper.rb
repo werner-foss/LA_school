@@ -16,4 +16,7 @@ module ApplicationHelper
     end
   end
   
+  def currency(amount)
+    number_to_currency(amount, unit: "RMB")
+  end
 end
