@@ -1,15 +1,18 @@
 class KidsController < ApplicationController
   before_action :set_kid, only: [:show, :edit, :update, :destroy]
+  layout "kid"
 
   # GET /kids
   # GET /kids.json
   def index
     @kids = Kid.all
+    @page_title = "Courses for young learners"
   end
 
   # GET /kids/1
   # GET /kids/1.json
   def show
+    @page_title = @kid.title
   end
 
   # GET /kids/new

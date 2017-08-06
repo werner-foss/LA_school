@@ -1,15 +1,18 @@
 class AdultsController < ApplicationController
   before_action :set_adult, only: [:show, :edit, :update, :destroy]
+  layout "adult"
 
   # GET /adults
   # GET /adults.json
   def index
     @adults = Adult.all
+    @page_title = "Courses for adult learners"
   end
 
   # GET /adults/1
   # GET /adults/1.json
   def show
+     @page_title = @adult.title
   end
 
   # GET /adults/new
@@ -62,19 +65,7 @@ class AdultsController < ApplicationController
       format.json { head :no_content }
     end
   end
-# Custom scope actions
-  def general
-    @general = Adult.general_course
-  end
-  
-  def business
-    @business = Adult.business_course
-  end
-  
-  def specialized
-    @specialized = Adult.specialized_course
-  end
-  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_adult

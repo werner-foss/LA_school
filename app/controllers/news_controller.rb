@@ -5,11 +5,13 @@ class NewsController < ApplicationController
   # GET /news.json
   def index
     @news = News.all
+    @page_title = "LAschool news"
   end
 
   # GET /news/1
   # GET /news/1.json
   def show
+     @page_title = @news.title
   end
 
   # GET /news/new

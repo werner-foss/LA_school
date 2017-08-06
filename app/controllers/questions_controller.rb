@@ -5,11 +5,13 @@ class QuestionsController < ApplicationController
   # GET /questions.json
   def index
     @questions = Question.all
+    @page_title = "FAQ"
   end
 
   # GET /questions/1
   # GET /questions/1.json
   def show
+     @page_title = @question.title
   end
 
   # GET /questions/new

@@ -5,15 +5,5 @@
 <%= link_to 'New News', new_news_path %>
 
 <div>
-  <% @news.each do |news| %>
-    <p> Title: <%= link_to news.title, news_path(news) %></p>
-    <p> Subtitle: <%= news.subtitle %></p>
-    <p> Body: <%= news.body %></p>
-    <p><%= image_tag news.small_image unless news.small_image.nil? %></p>
-    <p><%= link_to news.status, toggle_status_news_path(news) %></p>
-    <p><%= link_to 'Edit', edit_news_path(news) %> |
-       <%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </p>
-    <hr>
-  <% end %>
+  <%= render @news%>
 </div>
