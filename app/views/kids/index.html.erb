@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Courses for Kids</h1>
-<%= link_to 'New Course', new_kid_path %>
+<%= link_to 'New Course', new_kid_path if logged_in?(:site_admin) %>
 
 <div>
   <%= render @kids %>

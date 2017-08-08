@@ -2,7 +2,7 @@
 
 
 <h1>Courses for Adults</h1>
-<%= link_to 'New Course', new_adult_path %>
+<%= link_to 'New Course', new_adult_path if logged_in?(:site_admin) %>
 
 <div>
   <%= render @adults %>

@@ -1,10 +1,12 @@
 <p> Title: <%= link_to news.title, news_path(news) %></p>
-  <p> Subtitle: <%= news.subtitle %></p>
-  <p> Published <%= distance_of_time_in_words(news.updated_at, Time.now)%> ago </p>
-  <p> Body: <%= news.body %></p>
-  <p><%= image_tag news.small_image unless news.small_image.nil? %></p>
+<p> Subtitle: <%= news.subtitle %></p>
+<p> Published <%= distance_of_time_in_words(news.updated_at, Time.now)%> ago </p>
+<p> Body: <%= news.body %></p>
+<p><%= image_tag news.small_image unless news.small_image.nil? %></p>
+<% if logged_in?(:site_admin) %>
   <p><%= link_to news.status, toggle_status_news_path(news) %></p>
   <p><%= link_to 'Edit', edit_news_path(news) %> |
      <%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %>
-</p>
+  </p>
+<% end %>
 <hr>
