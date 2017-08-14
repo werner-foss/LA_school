@@ -1,17 +1,13 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
- <h4 class="navbar-brand">LA school</h4>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item"><%= link_to "Home", root_path, class: 'nav-link' %></li>
-      <li class="nav-item"><%= link_to "Courses", courses_path, class: 'nav-link' %></li>
-      <li class="nav-item"><%= link_to "Contact", contact_path, class: 'nav-link' %></li>
-      <li class="nav-item"><%= link_to "About", about_path, class: 'nav-link' %></li>
-      <li class="nav-item"><%= link_to "News", news_index_path, class: 'nav-link' %></li>
-      <li class="nav-item"><%= link_to "FAQ", questions_path, class: 'nav-link' %></li>
-      <li class="nav-item"><%= login_helper('nav-link') %></li>
-    </ul>
+<div class="blog-masthead">
+  <div class="container">
+    <nav class="nav blog-nav">
+      <%= link_to "Home", root_path, class: 'nav-link' %>
+      <%= link_to "Courses", courses_path, class: 'nav-link' %>
+      <%= link_to "Contact", contact_path, class: 'nav-link' %>
+      <%= link_to "About", about_path, class: 'nav-link' %>
+      <%= link_to "News", news_index_path, class: 'nav-link' %>
+      <%= link_to "FAQ", questions_path, class: 'nav-link' %>
+      <%= login_helper('nav-link') %>
+    </nav>
   </div>
-</nav>
+</div>

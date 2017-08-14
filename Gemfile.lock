@@ -78,6 +78,8 @@ GEM
     ffi (1.9.18-java)
     ffi (1.9.18-x64-mingw32)
     ffi (1.9.18-x86-mingw32)
+    font-awesome-rails (4.7.0.1)
+      railties (>= 3.2, < 5.1)
     friendly_id (5.2.1)
       activerecord (>= 4.0.0)
     globalid (0.4.0)
@@ -212,6 +214,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.3)
+  font-awesome-rails
   friendly_id (~> 5.2, >= 5.2.1)
   jbuilder (~> 2.5)
   jquery-rails
