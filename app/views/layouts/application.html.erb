@@ -22,12 +22,7 @@
           
           <%= yield %>
           
-          <div class="mastfoot">
-            <div class="inner">
-              <%= @copyright %>
-              <%= source_helper("application") %>
-            </div>
-          </div>
+          <%= render "partials/application_footer"%>
           
         </div>
       </div>
