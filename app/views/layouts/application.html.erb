@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords %>" />
@@ -11,15 +13,38 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-     
-    <%= render "partials/nav", location: 'navigation' %>
     
-    <%= login_helper %>
-    
-    <%= yield %>
-    
-    <%= @copyright %>
-    
-    <%= source_helper("application") %>
+    <div class="site-wrapper">
+      
+      <div class="site-wrapper-inner">
+        
+        <div class="cover-container">
+          
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">LA school</h3>
+              <nav class="nav nav-masthead">
+                <%= render "partials/nav", location: 'navigation' %>
+                <%= login_helper %>
+              </nav>
+            </div>
+          </div>
+          
+          <div class="inner cover">
+            <p class="lead"><%= yield %></p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+            </p>
+          </div>
+          
+          <div class="mastfoot">
+            <div class="inner">
+              <p><%= @copyright %></p>
+              <p><%= source_helper("application") %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
