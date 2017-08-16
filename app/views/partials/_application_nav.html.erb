@@ -1,17 +1,23 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <%= image_tag "icon.png", width: 30, height: 30, class: "navbar-brand"%>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-        <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
-        <li class="nav-item"><%= link_to "Courses", courses_path, class: "nav-link" %></li>
-        <li class="nav-item"><%= link_to "Contact", contact_path, class: "nav-link" %></li>
-        <li class="nav-item"><%= link_to "About", about_path, class: "nav-link" %></li>
-        <li class="nav-item"><%= link_to "News", news_index_path, class: "nav-link" %></li>
-        <li class="nav-item"><%= link_to "FAQ", questions_path, class: "nav-link" %></li>
-        <li class="nav-item"><%= login_helper('nav-link')%></li>
-      </ul>
-    </div>
-</nav>
+<div class="header">
+  <section id="header" class="appear">
+		<div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(0,0,0,1);">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="fa fa-bars color-white"></span>
+					</button>
+					<h3 class="navbar-brand" data-0="line-height:90px;" data-300="line-height:50px;">Hi, <%= current_user.first_name %></h3>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
+					<li><%= link_to "Home", root_path, class: "nav-link" %></li>
+          <li><%= link_to "Courses", courses_path, class: "nav-link" %></li>
+          <li><%= link_to "Contact", contact_path, class: "nav-link" %></li>
+          <li><%= link_to "About", about_path, class: "nav-link" %></li>
+          <li><%= link_to "News", news_index_path, class: "nav-link" %></li>
+          <li><%= link_to "FAQ", questions_path, class: "nav-link" %></li>
+          <li><%= login_helper('nav-link')%></li>
+					</ul>
+				</div>
+		</div>
+	</section>
+</div>
