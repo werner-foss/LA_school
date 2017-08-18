@@ -11,9 +11,4 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( kids.scss )
 Rails.application.config.assets.precompile += %w( adults.scss )
-Rails.application.config.assets.precompile += %w( isotope.css.scss )
-Rails.application.config.assets.precompile += %w( jquery.fancybox.css.scss )
-Rails.application.config.assets.precompile += %w( responsive-slider.css.scss )
-Rails.application.config.assets.precompile += %w( animate.css.scss )
-Rails.application.config.assets.precompile += %w( style.css.scss )
-Rails.application.config.assets.precompile += %w( default.css.scss )
+
