@@ -930,6 +930,13 @@ Media queries
 		margin-bottom: 30px;
 	}
 }
+/* ========================================
+Custom styles
+========================================= */
 .home {
   padding-top: 80px;
+}
+.carousel-item img {
+	 width: 100%;
+  height: auto;
 }
