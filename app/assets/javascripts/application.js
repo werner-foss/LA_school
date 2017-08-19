@@ -11,9 +11,12 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery3
-//= require popper
-//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require bootstrap
 //= require turbolinks
-//= require_tree .
+//= require modernizr-2.6.2-respond-1.1.0.min
+//= require jquery.easing.1.3
+//= require bootstrap.min
+//= require jquery.appear
+//= require grid
+//= require wow.min
