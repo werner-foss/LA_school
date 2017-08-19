@@ -58,3 +58,9 @@ gem 'devise', '~> 4.3'
 gem 'petergate', '~> 1.7', '>= 1.7.5'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'font-awesome-sass', '~> 4.7'
+gem 'simple_form', '~> 3.5'
+gem 'slim-rails', '~> 3.1', '>= 3.1.2'
+gem 'mail_form', '~> 1.7'
+group :development do
+  gem 'letter_opener_web', '~> 1.3', '>= 1.3.1'
+end

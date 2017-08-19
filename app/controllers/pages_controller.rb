@@ -4,9 +4,6 @@ class PagesController < ApplicationController
 
   def courses
   end
-
-  def contact
-  end
   
   def about
     @page_title = "About LAschool"
