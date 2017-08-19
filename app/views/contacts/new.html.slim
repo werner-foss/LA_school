@@ -1,0 +1,12 @@
+.cont
+	.container
+	  h1 Contact
+	  p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.
+	  = simple_form_for @contact, html: { class: 'form-horizontal' 'form-control' }, url: new_contact_path do |f|
+	    = f.input :name, required: false
+	    = f.input :email, required: false
+	    = f.input :message, as: :text, required: false, input_html: { rows: 5}
+	
+	    .form-actions
+	     .line-btn.green
+	       = f.button :submit, 'Send message', class: 'btn btn-green btn-lg btn-block'

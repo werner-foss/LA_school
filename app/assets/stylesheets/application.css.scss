@@ -933,10 +933,51 @@ Media queries
 /* ========================================
 Custom styles
 ========================================= */
-.home {
-  padding-top: 80px;
-}
 .carousel-item img {
 	 width: 100%;
   height: auto;
+}
+/* Contacts */
+.cont {
+	padding: 80px;
+	position: relative;
+	z-index: 999;
+}
+.cont h1, p{
+	text-align: center;
+}
+.cont input[type=text], input[type=email], textarea {
+	font-family: 'Open Sans', sans serif;
+	font-size:14px;
+	text-align: left;
+	vertical-align: middle;
+}
+.cont input[type=text]:focus, input[type=email]:focus, textarea:focus {
+	background: rgba(101, 106, 100, 1);
+	color: #eff1ef;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	transition: background 0.25 ease-in;
+	-moz-transition: background 0.25 ease-in;
+	-webkit-transition: background 0.25 ease-in;
+}
+.btn-green {
+  background-color: #417630;
+  border: 1px solid transparent;
+  border-color: #417630;
+  color: #fff;
+  transition: all .15s ease-in-out;
+}
+.btn-green:hover{
+	font-weight: normal;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4f4f4f;
+  border-color: transparent;
+}
+.btn-green:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
