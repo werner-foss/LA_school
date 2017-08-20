@@ -1,7 +1,42 @@
-<div class="blog-header">
-  <div class="container">
-    <h1 class="blog-title">Courses</h1>
-    <p class="lead blog-description"><%= link_to "Courses for Children", kids_path %></p>
-    <p class="lead blog-description"><%= link_to "Courses for Adults", adults_path %></p>
-  </div>
-</div>
+<section class="section appear clearfix">
+	<div class="container portf">
+		<div class="row mar-bot40">
+			<div class="col-md-offset-3 col-md-6">
+				<div class="section-header">
+				  <h2 class="section-heading animated" data-animation="bounceInUp">Courses</h2>
+					<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>
+				</div>
+			</div>
+		</div>
+    <div class="row">
+      <div class="portfolio-items isotopeWrapper clearfix" id="3">
+            
+        <article class="col-md-6 isotopeItem webdesign">
+					<div class="portfolio-item">
+						<div class="wow bounceIn">
+							<%= image_tag 'courses/kids-courses'%>
+						</div>
+						<div class="portfolio-desc align-center">
+							<div class="folio-info">
+							  <button type="button" class="btn btn-outline-secondary"><h2><%= link_to "Courses for Children", kids_path %></h2></button>
+							</div>										   
+						</div>
+					</div>
+        </article>
+
+        <article class="col-md-6 isotopeItem webdesign">
+					<div class="portfolio-item">
+						<div class="wow bounceIn">
+							<%= image_tag 'courses/adults-courses'%>
+						</div>
+					  <div class="portfolio-desc align-center">
+							<div class="folio-info">
+								<h2><%= link_to "Courses for Adults", adults_path %></h2>
+							</div>										   
+						</div>
+					</div>
+        </article>
+      </div>
+    </div>
+	</div>
+</section>
