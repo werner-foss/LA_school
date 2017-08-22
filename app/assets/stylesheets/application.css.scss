@@ -435,8 +435,7 @@ section.section {
 
 /* --- section heading --- */
 .section-header {
-	text-align: center;
-  padding-top: 20px;
+  text-align: center;
 }
 .section-header h2.section-heading {
 	text-transform: uppercase;
@@ -592,7 +591,7 @@ section.featured h2.slogan {
   padding-bottom: 20px;
 }
 .title{
-padding-top: 100px;
+padding-top: 80px;
 text-align: center;
 }
 .list-style{
@@ -1048,4 +1047,40 @@ Media queries
 
 .inner-bage h2 {
 	margin: 0;
+}
+/* News */
+.news-card {
+	box-sizing: border-box;
+	border-radius: 4px;
+	background-color: #fff;
+    border: 1px solid #ddd
+}
+.news-card h4 {
+  	margin: 10px 0 10px 0;
+  	text-align: center;
+}
+.news-card a {
+	color: #417630;
+}
+.news-card h5 {
+	color: #777;
+	padding: 0 15px 0 15px;
+	margin: 0 0 10px 0;
+}
+.news-breadcrumb-container {
+	padding: 7px 7px 7px 7px;
+}
+.news-breadcrumb {
+	font-size: 12px;
+}
+.badge-news {
+	padding: 8px 5px 8px 5px;
+    background-color: #417630;
+}
+.news-button {
+	background-color: #417630;
+}
+.news-button a {
+	color: #fff;
+	text-decoration: none;
 }

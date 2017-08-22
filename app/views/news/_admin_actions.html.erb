@@ -1,0 +1,7 @@
+<% if logged_in?(:site_admin) %>
+  <span class="pull-right">
+    <%= link_to news.status, toggle_status_news_path(news),class: "btn btn-info btn-sm" %>
+    <%= link_to icon('pencil-square-o'), edit_news_path(news), class: "btn btn-warning btn-sm"%>
+    <%= link_to icon('trash-o'), news, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm"%>
+  </span>
+<% end %>

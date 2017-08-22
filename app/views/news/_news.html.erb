@@ -1,12 +1,15 @@
-<p> Title: <%= link_to news.title, news_path(news) %></p>
-<p> Subtitle: <%= news.subtitle %></p>
-<p> Published <%= distance_of_time_in_words(news.updated_at, Time.now)%> ago </p>
-<p> Body: <%= news.body %></p>
-<p><%= image_tag news.small_image unless news.small_image.nil? %></p>
-<% if logged_in?(:site_admin) %>
-  <p><%= link_to news.status, toggle_status_news_path(news) %></p>
-  <p><%= link_to 'Edit', edit_news_path(news) %> |
-     <%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </p>
-<% end %>
-<hr>
+<div class="portfolio-items isotopeWrapper">
+  <article class="col-md-4">
+    <%= image_tag news.small_image unless news.small_image.nil? %>
+    <div class="card-block news-card">
+      <h4 class="card-title"><%= link_to news.title, news_path(news) %></h4>
+      <h5 class="card-subtitle"><%= news.subtitle %></h5>
+    </div>
+    <nav class="breadcrumb news-breadcrumb-container">
+      <span class="breadcrumb-item news-breadcrumb badge badge-news">
+        Posted <%= distance_of_time_in_words(news.updated_at, Time.now)%> ago
+      </span>
+      <%= render partial: 'news/admin_actions', locals: {news: news} %>
+    </nav>
+  </article>
+</div>
