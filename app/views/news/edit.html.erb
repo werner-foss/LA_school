@@ -1,6 +1,23 @@
-<h1>Editing News</h1>
-
-<%= render 'form', news: @news %>
-
-<%= link_to 'Show', @news %> |
-<%= link_to 'Back', news_index_path %>
+<section id="section-works" class="section appear clearfix">
+	<div class="container portf">
+		<div class="row mar-bot30">
+			<div class="col-md-offset-3 col-md-6">
+				<div class="section-header">
+				  <h2 class="section-heading animated" data-animation="bounceInUp">Editing News</h2>
+				</div>
+			</div>
+		</div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-2"></div>
+        <div class="portfolio-items isotopeWrapper">
+          <article class="col-md-8 news-position">
+            <%= render 'form', news: @news %>
+            <button type="button" class="btn btn-warning news-button"><%= link_to 'Back', news_index_path %></button>
+          </article>
+        </div>
+        <div class="col-md-2"></div>
+      </div> 
+    </div>
+  </div>
+</section>

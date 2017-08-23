@@ -1,5 +1,24 @@
-<h1>New Question</h1>
-
-<%= render 'form', question: @question %>
-
-<%= link_to 'Back', questions_path %>
+<section id="section-works" class="section appear clearfix">
+	<div class="container portf">
+		<div class="row mar-bot30">
+			<div class="col-md-offset-3 col-md-6">
+				<div class="section-header">
+				  <h2 class="section-heading animated" data-animation="bounceInUp">New FAQ</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+      <div class="faq">
+        <div class="col-sm-7 blog-main">
+          <div class="blog-post">
+            <%= render 'form', question: @question %>
+            <button type="button" class="btn btn-warning news-button"><%= link_to 'Back', questions_path %></button>
+          </div>
+        </div>
+        <div class="col-sm-5 offset-sm-1 blog-sidebar">
+          <%= render partial: 'questions/sidebar' %>
+        </div>
+      </div>
+    </div>
+	</div>
+</section>

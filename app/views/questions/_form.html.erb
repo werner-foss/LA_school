@@ -10,28 +10,26 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+  
+  <div class="form-group">
+    <%= f.text_field :title, class:'form-control', placeholder: 'Title' %>
   </div>
   
-  <div class="field">
-    <%= f.label :topic_id %>
+  <div class="form-group">
     <%= f.collection_select(:topic_id, Topic.all, :id, :title,
                               {
                                 include_blank: true
                               },
+                              class: 'form-control'
                             )
     %>
   </div>
   
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
+  <div class="form-group">
+    <%= f.text_area :body, class:'form-control', placeholder: 'Body'  %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit "Update", class: 'btn btn-info news-button btn-block' %>
   </div>
 <% end %>

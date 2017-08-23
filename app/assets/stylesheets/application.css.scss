@@ -159,7 +159,7 @@ a:hover {
 }
 .align-center {
 text-align: center;
-padding-top: 50px;
+padding-top: 20px;
 }
 .align-center i:hover {
 
@@ -424,8 +424,8 @@ i.service-icon:hover {
 =========================== */
 
 section.section {
-	margin:0;
-	padding: 10px 0 10px 0;
+	margin: 0;
+	padding: 0;
 }
 
 
@@ -435,8 +435,7 @@ section.section {
 
 /* --- section heading --- */
 .section-header {
-	text-align: center;
-  padding-top: 20px;
+  text-align: center;
 }
 .section-header h2.section-heading {
 	text-transform: uppercase;
@@ -592,7 +591,7 @@ section.featured h2.slogan {
   padding-bottom: 20px;
 }
 .title{
-padding-top: 100px;
+padding-top: 80px;
 text-align: center;
 }
 .list-style{
@@ -712,7 +711,7 @@ color:#417630;
 section#footer {
 	background: #242424;
 	margin: 0;
-	height: 300px;
+	height: 200px;
 }
 
 section#footer .copyright {
@@ -931,37 +930,43 @@ Media queries
 	}
 }
 /* ========================================
-Custom styles
+              Custom styles
 ========================================= */
+
 .carousel-item img {
 	 width: 100%;
   height: auto;
 }
+.image-about img{
+	display: block;
+  margin: auto;
+}
+.image-about {
+	padding-bottom: 5px;
+}
+
 /* Contacts */
+
 .cont {
-	padding: 80px;
+	padding-top: 80px;
+	padding-bottom: 40px;
 	position: relative;
 	z-index: 999;
 }
-.cont h1, p{
+
+.cont h2 {
 	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
 }
+
 .cont input[type=text], input[type=email], textarea {
 	font-family: 'Open Sans', sans serif;
 	font-size:14px;
 	text-align: left;
 	vertical-align: middle;
 }
-.cont input[type=text]:focus, input[type=email]:focus, textarea:focus {
-	background: rgba(101, 106, 100, 1);
-	color: #eff1ef;
-	box-shadow: none;
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	transition: background 0.25 ease-in;
-	-moz-transition: background 0.25 ease-in;
-	-webkit-transition: background 0.25 ease-in;
-}
+
 .btn-green {
   background-color: #417630;
   border: 1px solid transparent;
@@ -969,6 +974,7 @@ Custom styles
   color: #fff;
   transition: all .15s ease-in-out;
 }
+
 .btn-green:hover{
 	font-weight: normal;
   color: #ffffff;
@@ -976,8 +982,172 @@ Custom styles
   background-color: #4f4f4f;
   border-color: transparent;
 }
+
 .btn-green:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+/* Courses front page */
+
+.portf {
+	padding-top: 70px;
+}
+
+.isotopeWrapper article{
+    margin-bottom: 30px;
+}
+
+#portfolio img  {
+	width: 100%;
+}
+
+.portfolio-items article img {width:100%;} 
+
+.portfolio-item .portfolio-desc {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+	left: 0;
+	top: 0;
+	color: rgba(220, 220, 220, 0.7);
+}
+
+.portfolio-item:hover .portfolio-desc {
+	padding-top: 30%;
+	height: 100%;
+    transition: all 300ms ease-out 0ms;
+	opacity: 1;
+}
+
+.portfolio-item .portfolio-desc a {
+	color: #fff;
+}
+
+.inner-bage span{
+	background-color: #417630;
+}
+
+.inner-bage span:hover{
+	font-weight: normal;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4f4f4f;
+  border-color: transparent;
+}
+
+.inner-bage span:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.inner-bage h2 {
+	margin: 0;
+}
+/* News */
+
+.news-card {
+	box-sizing: border-box;
+	border-radius: 4px;
+	background-color: #fff;
+    border: 1px solid #ddd
+}
+.news-card h4 {
+  	margin: 10px 0 10px 0;
+  	text-align: center;
+}
+.news-card a {
+	color: #417630;
+}
+.news-card h5 {
+	color: #777;
+	padding: 0 15px 0 15px;
+	margin: 0 0 10px 0;
+}
+.news-breadcrumb-container {
+	padding: 7px 7px 7px 7px;
+}
+.news-breadcrumb {
+	font-size: 12px;
+}
+.badge-news {
+	padding: 8px 5px 8px 5px;
+    background-color: #417630;
+}
+.news-button {
+	background-color: #417630;
+}
+.news-button a {
+	color: #fff;
+	text-decoration: none;
+}
+.news-position {
+    display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* FAQ */
+
+.sidebar-module {
+  padding: 1rem;
+  margin: 0 -1rem 1rem;
+}
+.sidebar-module-inset {
+  padding: 1rem;
+  background-color: rgba(91,223,48,0.25);
+  border-radius: .50rem;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+.faq h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+  text-align: left;
+}
+
+.blog-header {
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+  border-bottom: .05rem solid #eee;
+}
+.blog-title {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: normal;
+}
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
+}
+
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.faq-part p {
+	float: left;
+	padding: 10px 5px 10px 5px;
+	margin-right: 15px;
+}
+.faq-badge p {
+	float: left;
+	padding: 8px 5px 8px 5px;
+	margin-right: 10px;
 }

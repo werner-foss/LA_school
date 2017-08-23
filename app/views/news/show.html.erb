@@ -1,22 +1,39 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @news.title %>
-</p>
-
-<p>
-  <strong>Subtitle:</strong>
-  <%= @news.subtitle %>
-</p>
-
-<p><%= image_tag @news.small_image unless @news.small_image.nil? %></p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @news.body %>
-</p>
-<% if logged_in?(:site_admin) %>
-  <%= link_to 'Edit', edit_news_path(@news) %> |
-<% end %>
-<%= link_to 'Back', news_index_path %>
+<section id="section-works" class="section appear clearfix">
+	<div class="container portf">
+		<div class="row mar-bot30">
+			<div class="col-md-offset-3 col-md-6">
+				<div class="section-header">
+				  <h2 class="section-heading animated" data-animation="bounceInUp"><%= @news.title %></h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		  <% if logged_in?(:site_admin) %>
+    		<div class="text-center mar-bot10">
+            <button class= "btn news-button"><%= link_to 'New reccord', new_news_path %></button>
+        </div>
+      <% end %>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="col-md-2"></div>
+          <div class="portfolio-items isotopeWrapper">
+            <article class="col-md-8 news-position">
+              <%= image_tag @news.small_image unless @news.small_image.nil? %>
+              <div class="card-block news-card">
+                <h4 class="card-subtitle"><%= @news.subtitle %></h4>
+                <p class="card-text"><%= @news.body %></p>
+              </div>
+              <nav class="breadcrumb">
+                <span class="breadcrumb-item btn btn-sm news-button">
+                  <%= link_to 'Back', news_index_path %>
+                </span>
+                <%= render partial: 'news/admin_actions', locals: {news: @news} %>
+              </nav>
+            </article>
+          </div>
+          <div class="col-md-2"></div>
+        </div> 
+      </div>
+    </div>
+	</div>
+</section>

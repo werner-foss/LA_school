@@ -1,9 +1,8 @@
-<p> Title: <%= link_to question.title, question %></p>
-<p> Body: <%= question.body %></p>
-<p> Topic: <%= question.topic_id %></p>
-<% if logged_in?(:site_admin) %>
-  <p><%= link_to 'Edit', edit_question_path(question) %> |
-    <%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </p>
-<% end %>
-<hr>
+<div class="blog-post">
+  <h2 class="blog-post-title"><%= question.title %></h2>
+  <span class="faq-part">
+    <p class="badge badge-default">Section: <%= question.topic_id %></p>
+    <button type="button" class="btn news-button"><%= link_to "View the answer", question %></button>
+  </span>
+  <%= render partial: 'questions/admin_links', locals: {question: question}  %>
+</div>
