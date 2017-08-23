@@ -1,10 +1,26 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Frequently Asked Questions</h1>
-<%= link_to 'New Question', new_question_path if logged_in?(:site_admin) %>
-<br>
-
-<div>
-  <%= render @questions %>
-</div>
-
+<section id="section-works" class="section appear clearfix">
+	<div class="container portf">
+		<div class="row mar-bot30">
+			<div class="col-md-offset-3 col-md-6">
+				<div class="section-header">
+				  <h2 class="section-heading animated" data-animation="bounceInUp">Frequently Asked Questions</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		  <% if logged_in?(:site_admin) %>
+    		<div class="text-center mar-bot10">
+            <button class= "btn news-button"><%= link_to 'New reccord', new_question_path %></button>
+        </div>
+      <% end %>
+      <div class="faq">
+        <div class="col-sm-7 blog-main">
+          <%= render @questions %> 
+        </div>
+        <div class="col-sm-5 offset-sm-1 blog-sidebar">
+          <%= render partial: 'questions/sidebar' %>
+        </div>
+      </div>
+    </div>
+	</div>
+</section>

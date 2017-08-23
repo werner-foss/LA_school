@@ -1,7 +1,6 @@
 .cont
 	.container
-	  h1 Contact
-	  p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.
+	  h2 Contact
 	  = simple_form_for @contact, html: { class: 'form-horizontal' 'form-control' }, url: new_contact_path do |f|
 	    = f.input :name, required: false
 	    = f.input :email, required: false

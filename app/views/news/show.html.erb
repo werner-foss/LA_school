@@ -24,7 +24,7 @@
                 <p class="card-text"><%= @news.body %></p>
               </div>
               <nav class="breadcrumb">
-                <span class="breadcrumb-item btn btn-secondary btn-sm news-button">
+                <span class="breadcrumb-item btn btn-sm news-button">
                   <%= link_to 'Back', news_index_path %>
                 </span>
                 <%= render partial: 'news/admin_actions', locals: {news: @news} %>

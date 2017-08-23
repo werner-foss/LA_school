@@ -9,16 +9,14 @@
 		</div>
     <div class="row">
       <div class="col-md-12">
+        <div class="col-md-2"></div>
         <div class="portfolio-items isotopeWrapper">
           <article class="col-md-8 news-position">
             <%= render 'form', news: @news %>
-            <nav class="breadcrumb">
-              <span class="breadcrumb-item btn btn-secondary btn-sm news-button"><%= link_to 'Show', @news %></span>
-              <span class="breadcrumb-item btn btn-secondary btn-sm news-button"><%= link_to 'Back', news_index_path %></span>
-            </nav>
+            <button type="button" class="btn btn-warning news-button"><%= link_to 'Back', news_index_path %></button>
           </article>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-2"></div>
       </div> 
     </div>
   </div>

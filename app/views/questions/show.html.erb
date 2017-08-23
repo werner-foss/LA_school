@@ -1,20 +1,37 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @question.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @question.body %>
-</p>
-
-<p>
-  <strong>Topic:</strong> 
-  <%= @question.topic_id %>
-</p>
-<% if logged_in?(:site_admin) %>
-  <%= link_to 'Edit', edit_question_path(@question) %> |
-<% end %>
-<%= link_to 'Back', questions_path %>
+<section id="section-works" class="section appear clearfix">
+	<div class="container portf">
+		<div class="row mar-bot30">
+			<div class="col-md-offset-3 col-md-6">
+				<div class="section-header">
+				  <h2 class="section-heading animated" data-animation="bounceInUp"><%= @question.title %></h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		  <% if logged_in?(:site_admin) %>
+    		<div class="text-center mar-bot10">
+            <button class= "btn news-button"><%= link_to 'New reccord', new_question_path %></button>
+        </div>
+      <% end %>
+      <div class="faq">
+        <div class="col-sm-7 blog-main">
+          <div class="blog-post">
+            <p><%= @question.body %></p>
+            <nav class="breadcrumb">
+              <span class="faq-badge">
+                <p class="badge badge-default">Section: <%= @question.topic_id %></p>
+              </span>
+              <span class="breadcrumb-item btn btn-sm news-button">
+                <%= link_to 'Back', questions_path %>
+              </span>
+              <%= render partial: 'questions/admin_links', locals: {question: @question}  %>
+            </nav>
+          </div>
+        </div>
+        <div class="col-sm-5 offset-sm-1 blog-sidebar">
+          <%= render partial: 'questions/sidebar' %>
+        </div>
+      </div>
+    </div>
+	</div>
+</section>
