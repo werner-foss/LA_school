@@ -1,10 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-
-<h1>Courses for Adults</h1>
-<%= link_to 'New Course', new_adult_path if logged_in?(:site_admin) %>
-
-<div>
-  <%= render @adults %>
-</div>
-
+<section id ="organisations" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="header-section text-center">
+        <h2>Courses for Adults</h2>
+        <%= link_to 'New Course', new_adult_path if logged_in?(:site_admin) %>
+        <hr class="bottom-line">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <%= render @adults %>
+    </div>
+  </div>
+</section>

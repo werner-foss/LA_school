@@ -1,31 +1,41 @@
-<p id="notice"><%= notice %></p>
+<section id ="organisations" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="header-section text-center">
+        <h2><%= @adult.title %></h2>
+        <% if logged_in?(:site_admin) %>
+          <%= link_to icon('plus-square'), new_adult_path, class: "btn btn-info btn-sm" %>
+          <%= link_to icon('pencil-square-o'), edit_adult_path(@adult), class: "btn btn-warning btn-sm"%>
+          <%= link_to icon('trash-o'), @adult, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm"%>
+        <% end %>
+        <hr class="bottom-line">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <%= image_tag @adult.main_image %>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-info">
+          <hgroup>
+            <h4 class="det-txt"><%= @adult.subtitle %></h4>
+            <h6 class="sm-txt">Type of the course:
+                                <% @adult.courses.each do |t| %>
+                                  <p class="sm-txt"><%= t.name %></p>
+                                <% end %>
+            </h6>
+          </hgroup>
+          <p class="det-p"><%= @adult.body %></p>
+          <nav class="breadcrumb">
+            <span class="breadcrumb-item btn btn-sm">
+              <%= link_to 'Back', adults_path %>
+            </span>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p>
-  <strong>Title:</strong>
-  <%= @adult.title %>
-</p>
-
-<p>
-  <strong>Level:</strong>
-  <%= @adult.subtitle %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @adult.body %>
-</p>
-
-<p>
-  <%= image_tag @adult.main_image %>
-</p>
-
-<div>
-  <p> <strong> Type of the course  </strong></p>
-  <% @adult.courses.each do |t| %>
-   <p><%= t.name %> </p>
-  <% end %>
-</div>
-<% if logged_in?(:site_admin) %>
-  <%= link_to 'Edit', edit_adult_path(@adult) %> |
-<% end %>
-<%= link_to 'Back', adults_path %>

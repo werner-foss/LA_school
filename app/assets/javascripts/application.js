@@ -20,3 +20,4 @@
 //= require jquery.appear
 //= require grid
 //= require wow.min
+//= require custom
