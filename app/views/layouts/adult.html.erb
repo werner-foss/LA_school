@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-    <meta name="keywords" content="<%= @seo_keywords %>" />
+    <meta name="keywords" content="<%= @seo_keywords %>">
+    
     <%= stylesheet_link_tag    'adults', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
-
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    
-    <%= render "partials/nav", location: 'navigation' %>
-    
-    <%= login_helper('nav-link') %>
+    <%= render "partials/adult_nav" %>
     
     <%= yield %>
-    
-    <%= @copyright %>
-    
-    <%= source_helper("adults") %>
+  
+    <%= render "partials/adult_footer" %>
   </body>
 </html>
+ 

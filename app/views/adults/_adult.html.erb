@@ -1,8 +1,11 @@
-<p> Title <%= link_to adult.title, adult_path(adult) %></p>
-<p> Course <%= adult.subtitle %></p>
-<p><%= image_tag adult.thumb_image %></p>
-<% if logged_in?(:site_admin) %>
-  <p><%= link_to 'Edit', edit_adult_path(adult) %> |
-    <%= link_to 'Destroy', adult, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </p>
-<% end %>
+<div class="col-md-4 col-sm-6 padleft-right">
+  <figure class="imghvr-fold-up">
+    <%= image_tag adult.main_image, class: "img-responsive" %>
+    <figcaption>
+      <%= link_to icon('info-circle'), adult_path(adult), class: "adults-icon"%>
+      <h3><%= adult.title %></h3> 
+      <p><%= adult.subtitle %></p>
+    </figcaption>
+  </figure>
+</div>
+
