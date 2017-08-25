@@ -2,9 +2,10 @@
   <figure class="imghvr-fold-up">
     <%= image_tag adult.main_image, class: "img-responsive" %>
     <figcaption>
-        <h3><%= adult.title %></h3>
-        <p><%= adult.subtitle %></p>
-        <%= link_to " ", adult_path(adult) %>
+      <%= link_to icon('info-circle'), adult_path(adult), class: "adults-icon"%>
+      <h3><%= adult.title %></h3> 
+      <p><%= adult.subtitle %></p>
     </figcaption>
   </figure>
 </div>
+
