@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="header-section text-center">
-        <h2><%= @adult.title %></h2>
+        <h2 class="badge badge-custom"><%= @adult.title %></h2>
         <% if logged_in?(:site_admin) %>
           <%= link_to icon('plus-square'), new_adult_path, class: "btn btn-info type-list btn-sm" %>
           <%= link_to icon('pencil-square-o'), edit_adult_path(@adult), class: "btn btn-warning btn-sm"%>
@@ -19,7 +19,7 @@
             <h5 class="ser-text text-center"><%= @adult.subtitle %></h5>
           </div>
           <ul class="list-group">
-            <li class="list-group-item type-list">Type of the course</li>
+            <li class="list-group-item type-list button-custom">Type of the course</li>
             <% @adult.courses.each do |t| %>
               <li class="list-group-item"><%= t.name %></li>
             <% end %>
@@ -29,8 +29,8 @@
       <div class="col-md-8 col-sm-6">
         <div class="service-box text-left">
           <p class="ser-text"><%= @adult.body %></p>
-          <%= link_to 'Back', adults_path, class: "btn btn-warning btn-sm" %>
-          <%= link_to 'Purchase the course', contacts_path, class: "btn btn-info type-list btn-sm" %>
+          <%= link_to 'Back', adults_path, class: "btn btn-warning btn-sm button-peach" %>
+          <%= link_to 'Purchase the course', contacts_path, class: "btn btn-info type-list btn-sm button-custom" %>
         </div>
       </div>
     </div>
