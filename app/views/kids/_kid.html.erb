@@ -1,8 +1,10 @@
-<p> Title <%= link_to kid.title, kid_path(kid) %></p>
-<p> Level <%= kid.subtitle %></p>
-<p><%= image_tag kid.thumb_image %></p>
-<% if logged_in?(:site_admin) %>
-  <p><%= link_to 'Edit', edit_kid_path(kid) %> |
-    <%= link_to 'Destroy', kid, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </p>
-<% end %>
+<div class="col-md-4 col-sm-6 padleft-right">
+  <figure class="imghvr-fold-up">
+    <%= image_tag kid.main_image, class: "img-responsive" %>
+    <figcaption>
+      <%= link_to icon('info-circle'), kid_path(kid), class: "adults-icon"%>
+      <h3><%= kid.title %></h3> 
+      <p><%= kid.subtitle %></p>
+    </figcaption>
+  </figure>
+</div>

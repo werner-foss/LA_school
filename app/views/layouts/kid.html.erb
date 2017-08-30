@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-    <meta name="keywords" content="<%= @seo_keywords %>" />
+    <meta name="keywords" content="<%= @seo_keywords %>">
+    
     <%= stylesheet_link_tag    'kids', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    
-    <%= render "partials/nav", location: 'navigation' %>
-    
-    <%= login_helper('nav-link') %>
+    <%= render "partials/kid_nav" %>
     
     <%= yield %>
-    
-    <%= @copyright %>
-    
-    <%= source_helper("kids") %>
+  
+    <%= render "partials/kid_footer" %>
   </body>
 </html>
