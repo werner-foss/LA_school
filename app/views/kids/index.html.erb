@@ -1,9 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Courses for Kids</h1>
-<%= link_to 'New Course', new_kid_path if logged_in?(:site_admin) %>
-
-<div>
-  <%= render @kids %>
-</div>
-
+<section id ="organisations" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="header-section text-center">
+        <h2 class="badge badge-custom">Courses for Young learners</h2>
+        <%= link_to icon('plus-square'), new_kid_path, class: "btn btn-info type-list btn-sm" if logged_in?(:site_admin) %>
+        <hr class="bottom-line">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <%= render @kids %>
+    </div>
+  </div>
+</section>

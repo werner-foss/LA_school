@@ -96,10 +96,11 @@ h2{
 	padding-bottom: 15px;
 }
 .bottom-line{
-	width: 25px;
+	width: 250px;
 	height: 3px;
-	background-color: rgb(99, 122, 145);
+	background: linear-gradient(40deg,#45cafc,#303f9f);
 }
+
 .fea{
 	margin-top: 25px;
 }
@@ -414,7 +415,7 @@ Custom styles
 }
 
 .badge-custom {
-    background: linear-gradient(40deg,#45cafc,#303f9f);;
+    background: linear-gradient(40deg,#45cafc,#303f9f);
     font-size: 24px;
     display: block;
     max-width: 250px;
