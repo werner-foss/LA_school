@@ -1151,3 +1151,63 @@ Media queries
 	padding: 8px 5px 8px 5px;
 	margin-right: 10px;
 }
+
+/* Devise */
+
+.devise-card {
+	  padding-top: 70px;
+	  padding-bottom: 20px;
+    position: relative;
+    margin: auto;
+    box-sizing: inherit;
+}
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    border: 2px solid rgba(0,0,0,.125);
+    border-radius: 5px;
+    text-align: left;
+}
+.card h3 {
+	margin: auto;
+}
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #f7f7f9;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.card-block {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+.card-footer:last-child {
+    border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+}
+.card-footer {
+    padding: .75rem 1.25rem;
+    background-color: #f7f7f9;
+    border-top: 1px solid rgba(0,0,0,.125);
+}
+.devise-container {
+	max-width: 450px;
+}
+.devise-form {
+  float: left;
+  margin: 0;
+}
