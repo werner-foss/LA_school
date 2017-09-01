@@ -16,6 +16,7 @@
       <div class="faq">
         <div class="col-sm-7 blog-main">
           <%= render @questions %> 
+          <div class="faq-paginate"><%= paginate @questions %></div>
         </div>
         <div class="col-sm-5 offset-sm-1 blog-sidebar">
           <%= render partial: 'questions/sidebar' %>

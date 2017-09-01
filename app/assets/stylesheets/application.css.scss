@@ -399,9 +399,7 @@ i.service-icon:hover {
 .mar-bot15 {
 	margin-bottom: 15px;
 }
-.mar-bot20 {
-	margin-bottom: 20px;
-}
+
 .mar-bot25 {
 	margin-bottom: 25px;
 }
@@ -995,10 +993,6 @@ Media queries
 	padding-top: 70px;
 }
 
-.isotopeWrapper article{
-    margin-bottom: 30px;
-}
-
 #portfolio img  {
 	width: 100%;
 }
@@ -1046,6 +1040,10 @@ Media queries
 
 .inner-bage h2 {
 	margin: 0;
+}
+
+.mar-bot20 {
+	margin-bottom: 20px;
 }
 /* News */
 
@@ -1151,7 +1149,9 @@ Media queries
 	padding: 8px 5px 8px 5px;
 	margin-right: 10px;
 }
-
+.faq-paginate > .pagination {
+	padding-left: 0px;
+}
 /* Devise */
 
 .devise-card {
@@ -1210,4 +1210,17 @@ Media queries
 .devise-form {
   float: left;
   margin: 0;
+}
+
+/* Paggination */
+.pagination {
+  padding-left: 15px;
+  margin: 0 0 20px 0;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+    background-color: #417630;
+    border-color: #417630;
+}
+.pagination > li > a, .pagination > li > span {
+    color: #417630;
 }

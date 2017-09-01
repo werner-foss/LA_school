@@ -437,3 +437,20 @@ Custom styles
 .navbar-toggle {
     margin: 10px 20px 10px 0px;
 }
+
+/***********************************
+************************************
+Paggination
+************************************
+***********************************/
+.pagination {
+    padding-left: 15px;
+    margin: 20px 0px 0px 0px;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+    background-color: #01b1d7;
+    border-color: #01b1d7;
+}
+.pagination > li > a, .pagination > li > span {
+    color: #01b1d7;
+}

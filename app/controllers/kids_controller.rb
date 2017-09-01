@@ -6,7 +6,7 @@ class KidsController < ApplicationController
   # GET /kids
   # GET /kids.json
   def index
-    @kids = Kid.all
+    @kids = Kid.page(params[:page]).per(6)
     @page_title = "Courses for young learners"
   end
 
