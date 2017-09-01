@@ -53,6 +53,7 @@ Navigation bar
     height: inherit;
     font-size: 20px;
     margin: 20px 0px 20px 20px;
+    color: #00c853;
 }
 
 .navbar-default {
@@ -70,9 +71,11 @@ Navigation bar
 }
 .navbar-nav > li > a{
 	margin: 10px 5px;
-    padding: 20px 15px 10px 15px;
+    padding: 20px 15px 20px 15px;
 }
-
+.navbar-nav {
+    margin-top: 1px;
+}
 .navbar {
     margin-bottom: 0px;
 }
