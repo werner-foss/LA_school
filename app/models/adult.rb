@@ -13,4 +13,8 @@ class Adult < ApplicationRecord
     self.main_image ||= Placeholder.image_generator(height:'350', width:'150')
     self.thumb_image ||= Placeholder.image_generator(height:'50', width:'50')
   end
+  
+  def self.by_position
+    order("position ASC")
+  end
 end
