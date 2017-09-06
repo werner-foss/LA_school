@@ -554,3 +554,20 @@ Custom styles
     display: inline-block;
     clear: both;
 }
+
+/***********************************
+************************************
+Paggination
+************************************
+***********************************/
+.pagination {
+    padding-left: 15px;
+    margin: 20px 0px 0px 0px;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+    background-color: #973CB6;
+    border-color: #973CB6;
+}
+.pagination > li > a, .pagination > li > span {
+    color: #973CB6;
+}

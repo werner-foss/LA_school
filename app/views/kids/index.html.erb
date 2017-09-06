@@ -1,28 +1,9 @@
 <section id ="organisations" class="section-padding">
-  <header id="head">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <div class="heading-text">
-        <h1 class="animated flipInY delay1">Start your on-line education today</h1>
-        <br>
-        <p>The best and the most inspiring way of learning</p>
-      </div>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <%= image_tag 'courses/slides/img1', class: "d-block img-fluid" %>
-        </div>
-        <div class="item">
-          <%= image_tag 'courses/slides/img2', class: "d-block img-fluid" %>
-        </div>
-        <div class="item">
-          <%= image_tag 'courses/slides/img3', class: "d-block img-fluid" %>
-        </div>
-      </div>
-    </div>
-    <hr class="bottom-line">
-  </header>
+  <%= render "carousel_kid" %>
   <div class="container">
     <div class="row">
       <%= render @kids %>
+      <%= paginate @kids %>
     </div>
   </div>
 </section>

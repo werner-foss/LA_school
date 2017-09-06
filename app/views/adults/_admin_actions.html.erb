@@ -1,0 +1,5 @@
+<% if logged_in?(:site_admin) %>
+  <%= link_to icon('plus-square'), new_adult_path, class: "btn btn-info type-list btn-sm" %>
+  <%= link_to icon('pencil-square-o'), edit_adult_path(@adult), class: "btn btn-warning btn-sm"%>
+  <%= link_to icon('trash-o'), @adult, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm"%>
+<% end %>

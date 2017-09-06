@@ -22,7 +22,7 @@
                 <p class="badge badge-default">Section: <%= @question.topic_id %></p>
               </span>
               <span class="breadcrumb-item btn btn-sm news-button">
-                <%= link_to 'Back', questions_path %>
+                <%= link_to 'Back to the list of questions', questions_path %>
               </span>
               <%= render partial: 'questions/admin_links', locals: {question: @question}  %>
             </nav>

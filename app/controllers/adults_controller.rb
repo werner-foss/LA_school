@@ -6,7 +6,7 @@ class AdultsController < ApplicationController
   # GET /adults
   # GET /adults.json
   def index
-    @adults = Adult.all
+    @adults = Adult.page(params[:page]).per(6)
     @page_title = "Courses for adult learners"
   end
 

@@ -3,11 +3,7 @@
     <div class="row">
       <div class="header-section text-center">
         <h2 class="badge badge-custom"><%= @kid.title %></h2>
-        <% if logged_in?(:site_admin) %>
-          <%= link_to icon('plus-square'), new_kid_path, class: "btn btn-info type-list btn-sm" %>
-          <%= link_to icon('pencil-square-o'), edit_kid_path(@kid), class: "btn btn-warning btn-sm"%>
-          <%= link_to icon('trash-o'), @kid, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm"%>
-        <% end %>
+        <%= render 'admin_actions' %>
         <hr class="bottom-line">
       </div>
       <div class="col-md-4 col-sm-6">
@@ -23,8 +19,8 @@
       <div class="col-md-8 col-sm-6">
         <div class="service-box text-left">
           <p class="ser-text"><%= @kid.body %></p>
-          <%= link_to 'Back', kids_path, class: "btn btn-sm button-green" %>
-          <%= link_to 'Purchase the course', contacts_path, class: "btn type-list btn-sm button-custom" %>
+          <%= link_to 'View all courses', kids_path, class: "btn btn-sm button-green" %>
+          <%= link_to 'Purchase this course', contacts_path, class: "btn type-list btn-sm button-custom" %>
         </div>
       </div>
     </div>
