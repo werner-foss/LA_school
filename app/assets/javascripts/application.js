@@ -12,12 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.easing.1.3
-//= require jquery.appear
+//= require custom
 //= require bootstrap
 //= require bootstrap.min
+//= require jquery.easing.1.3
+//= require jquery.appear
 //= require modernizr-2.6.2-respond-1.1.0.min
 //= require grid
 //= require wow.min
-//= require custom
 //= require turbolinks
+//= require_tree .
