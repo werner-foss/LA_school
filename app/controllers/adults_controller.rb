@@ -9,6 +9,14 @@ class AdultsController < ApplicationController
     @adults = Adult.by_position
     @page_title = "Courses for adult learners"
   end
+  
+  def sort
+    params[:order].each do |key, value|
+      Adult.find(value[:id]).update(position: value[:position])
+    end
+
+    render nothing: true
+  end
 
   # GET /adults/1
   # GET /adults/1.json
