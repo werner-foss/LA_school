@@ -13,7 +13,9 @@ Rails.application.routes.draw do
     put :sort, on: :collection
   end
   
-  resources :kids
+  resources :kids do
+    put :sort, on: :collection
+  end
   
   resources :news do
     member do

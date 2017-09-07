@@ -1,15 +1,23 @@
 class KidsController < ApplicationController
   before_action :set_kid, only: [:show, :edit, :update, :destroy]
   layout "kid"
-  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all, message: "Access denied"
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all, message: "Access denied"
 
   # GET /kids
   # GET /kids.json
   def index
-    @kids = Kid.page(params[:page]).per(6)
+    @kids = Kid.by_position
     @page_title = "Courses for young learners"
   end
+  
+  def sort
+    params[:order].each do |key, value|
+      Kid.find(value[:id]).update(position: value[:position])
+    end
 
+    render nothing: true
+  end
+  
   # GET /kids/1
   # GET /kids/1.json
   def show
