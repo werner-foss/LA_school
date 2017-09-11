@@ -4,6 +4,9 @@ class Kid < ApplicationRecord
   friendly_id :title, use: :slugged
   validates_presence_of :title, :subtitle, :body, :main_image, :thumb_image
   
+  mount_uploader :thumb_image, LanguageUploader
+  mount_uploader :main_image, LanguageUploader
+  
   after_initialize :set_defaults
   
   def set_defaults

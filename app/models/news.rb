@@ -5,6 +5,8 @@ class News < ApplicationRecord
   friendly_id :title, use: :slugged
   validates_presence_of :title, :subtitle, :body, :small_image
   
+  mount_uploader :small_image, LanguageUploader
+  
   after_initialize :set_defaults
   
   def set_defaults
