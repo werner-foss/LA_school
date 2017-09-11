@@ -1,13 +1,21 @@
 class AdultsController < ApplicationController
   before_action :set_adult, only: [:show, :edit, :update, :destroy]
   layout "adult"
-  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all, message: "Access denied"
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all, message: "Access denied"
 
   # GET /adults
   # GET /adults.json
   def index
-    @adults = Adult.page(params[:page]).per(6)
+    @adults = Adult.by_position
     @page_title = "Courses for adult learners"
+  end
+  
+  def sort
+    params[:order].each do |key, value|
+      Adult.find(value[:id]).update(position: value[:position])
+    end
+
+    render nothing: true
   end
 
   # GET /adults/1

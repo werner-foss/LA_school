@@ -1,4 +1,4 @@
-<div class="col-md-4 col-sm-6 padleft-right">
+<div class="<%= "java-part" if logged_in?(:site_admin) %> col-md-4 col-sm-6 padleft-right" data-id="<%= adult.id %>">
   <figure class="imghvr-fold-up">
     <%= image_tag adult.main_image, class: "img-responsive" %>
     <figcaption>
@@ -8,4 +8,3 @@
     </figcaption>
   </figure>
 </div>
-

@@ -1,9 +1,8 @@
 <section id ="organisations" class="section-padding">
   <%= render "carousel_kid" %>
   <div class="container">
-    <div class="row">
+    <div class="row <%= "sortable" if logged_in?(:site_admin) %>">
       <%= render @kids %>
-      <%= paginate @kids %>
     </div>
   </div>
 </section>

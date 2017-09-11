@@ -9,9 +9,13 @@ Rails.application.routes.draw do
   
   resources :questions
   
-  resources :adults
+  resources :adults do
+    put :sort, on: :collection
+  end
   
-  resources :kids
+  resources :kids do
+    put :sort, on: :collection
+  end
   
   resources :news do
     member do
