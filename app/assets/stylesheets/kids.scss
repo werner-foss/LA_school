@@ -555,7 +555,18 @@ Custom styles
     display: inline-block;
     clear: both;
 }
-
+.left-float {
+    float: left;
+}
+.right-float {
+    float: right;
+}
+.kids-form {
+    margin-bottom: 30px;
+}
+.btn-kids {
+    padding: 6px 12px;
+}
 /***********************************
 ************************************
 Paggination
