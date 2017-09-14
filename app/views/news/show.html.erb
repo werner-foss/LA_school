@@ -18,7 +18,7 @@
           <div class="col-md-2"></div>
           <div class="portfolio-items isotopeWrapper">
             <article class="col-md-8 news-position">
-              <%= image_tag @news.small_image unless @news.small_image.nil? %>
+               <%= image_tag news_img(@news.small_image)%>
               <div class="card-block news-card">
                 <h4 class="card-subtitle"><%= @news.subtitle %></h4>
                 <p class="card-text"><%= @news.body %></p>

@@ -438,10 +438,21 @@ Custom styles
 .navbar-toggle {
     margin: 10px 20px 10px 0px;
 }
-
+.left-float {
+    float: left;
+}
+.right-float {
+    float: right;
+}
+.adults-form {
+    margin-bottom: 30px;
+}
+.btn-adults {
+    padding: 6px 9px;
+}
 /***********************************
 ************************************
-Paggination
+Paggination (just in case one needs it)
 ************************************
 ***********************************/
 .pagination {

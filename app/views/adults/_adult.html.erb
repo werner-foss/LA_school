@@ -1,6 +1,6 @@
 <div class="<%= "java-part" if logged_in?(:site_admin) %> col-md-4 col-sm-6 padleft-right" data-id="<%= adult.id %>">
   <figure class="imghvr-fold-up">
-    <%= image_tag adult.main_image, class: "img-responsive" %>
+    <%= image_tag adults_img(adult.thumb_image, 'thumb'), class: "img-responsive" %>
     <figcaption>
       <%= link_to icon('info-circle'), adult_path(adult), class: "adults-icon"%>
       <h3><%= adult.title %></h3> 
