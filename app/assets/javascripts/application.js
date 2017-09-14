@@ -22,5 +22,6 @@
 //= require wow.min
 //= require jquery-ui
 //= require html.sortable
+//= require cocoon
 //= require turbolinks
 //= require_tree .
