@@ -1,14 +1,8 @@
 <%= form_for(adult) do |f| %>
   <% if adult.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(adult.errors.count, "error") %> prohibited this adult from being saved:</h2>
-
-      <ul>
-      <% adult.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+    <% adult.errors.full_messages.each do |error| %>
+      <%= alert_generator error %>
+    <% end %>
   <% end %>
   
   <div class="col-md-4 col-sm-6">
@@ -27,16 +21,18 @@
           <%= f.text_field :subtitle, class:'form-control', placeholder: 'Subtitle' %>
         </div>
       </div>
-      <div class="form-group">
-        <ul class:'form-control'>
-          <%= f.fields_for :courses do |courses_form| %>
-            <li>
-             <%= courses_form.label :name %>
-             <%= courses_form.text_field :name %>
-            </li>
-          <% end %>
-        </ul>
+      
+      <div>
+        <h4>Type of the course</h4>
+        <%= f.fields_for :courses do |courses_form| %>
+          <%= render 'course_fields', f: courses_form %>
+        <% end %>
       </div>
+      
+      <div>
+        <%= link_to_add_association 'Add a course type', f, :courses, class: 'btn btn-info btn-sm'  %>
+      </div>
+      
     </div>
   </div>
   <div class="col-md-8 col-sm-6">

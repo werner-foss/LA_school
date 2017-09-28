@@ -53,6 +53,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #Custom gems
+gem 'gritter', '~> 1.2'
+gem 'cocoon', '~> 1.2', '>= 1.2.10'
 gem 'carrierwave', '~> 1.1'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 gem 'mini_magick', '~> 4.8'

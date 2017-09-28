@@ -45,4 +45,16 @@ module ApplicationHelper
     number_to_currency(amount, unit: "RMB")
   end
   
+  def alert_helper
+    alert = (flash[:alert] || flash[:error] || flash[:notice])
+    
+    if alert
+      alert_generator alert
+    end
+  end
+  
+  def alert_generator msg
+    js add_gritter(msg, title: "Attention, please!", time: 3000, sticky: false)
+  end
+  
 end
