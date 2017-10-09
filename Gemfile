@@ -53,6 +53,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #Custom gems
+gem 'redis', '~> 4.0', '>= 4.0.1'
 gem 'gritter', '~> 1.2'
 gem 'cocoon', '~> 1.2', '>= 1.2.10'
 gem 'carrierwave', '~> 1.1'

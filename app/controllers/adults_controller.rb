@@ -21,6 +21,8 @@ class AdultsController < ApplicationController
   # GET /adults/1
   # GET /adults/1.json
   def show
+    @adult = Adult.includes(:comments).friendly.find(params[:id])
+    @comment = Comment.new
     @page_title = @adult.title
   end
 
