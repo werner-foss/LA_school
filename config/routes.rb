@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  
-  resources :comments
   resources 'contacts', only: [:new, :create], path_names: { new: '' }
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
@@ -23,6 +21,8 @@ Rails.application.routes.draw do
      get :toggle_status
     end 
   end
+  
+  mount ActionCable.server => '/cable'
   
   root to: 'pages#home'
 

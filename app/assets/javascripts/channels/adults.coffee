@@ -3,7 +3,7 @@ jQuery(document).on 'turbolinks:load', ->
   if comments.length > 0
     App.global_chat = App.cable.subscriptions.create {
       channel: "AdultsChannel"
-      adult_id: comment.data('adult-id')
+      adult_id: comments.data('adult-id')
     },
     connected: ->
     disconnected: ->
@@ -14,4 +14,9 @@ jQuery(document).on 'turbolinks:load', ->
   $('#new_comment').submit (e) ->
     $this = $(this)
     textarea = $this.find('#comment_content')
-    
+    if $.trim(textarea.val()).length > 1
+      App.global_chat.send_comment textarea.val(),
+      comments.data('adult-id')
+      textarea.val('')
+    e.preventDefault()
+    return false
